@@ -93,62 +93,26 @@
 
 <p></p>
 
-<font size='4', face="Arial"><h2>2. Long-form utterance</h2></font>
-<p><font size='4', face="Arial">These utterances are used in our subjective evaluations.</font></p>
+<font size='4', face="Arial"><h2>2. VITS-generated synthetic speech</h2></font>
+<p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
+<p><font size='4', face="Arial">The baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
+<p><font size='4', face="Arial">We use < as the breath mark within the text. The texts are from the test set of other speakers.</font></p>
 <table>
   <tbody>
     <tr>
-      <th><font size='4', face="Arial"><b>FastSpeech2</b></font></th>
-      <th><font size='4', face="Arial"><b>Baseline</b></font></th>
-      <th><font size='4', face="Arial"><b>RPI</b></font></th>
-      <th><font size='4', face="Arial"><b>CPI</b></font></th>
-      <th><font size='4', face="Arial"><b>CPI (Position)</b></font></th>
-      <th><font size='4', face="Arial"><b>RPI*</b></font></th>
-      <th><font size='4', face="Arial"><b>CPI*</b></font></th>
+      <th><font size='4' face="Arial"><b>VITS w/ baseline</b></font></th>
+      <th><font size='4' face="Arial"><b>VITS w/ proposed</b></font></th>
     </tr>
-    <tr><td colspan="4"><span><font size='4', face="Arial">1. (speaker id: 637, male speaker) If the congress wishes to be the voice of the revolutionary democracy it must not sit with folded hands before the developing civil war, the result of which may be a dangerous outburst of counter revolution. The possibility of a peaceful outcome lies in the formation of a united democratic authority.</font></span></td></tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">6. (speaker id: 3630) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
     <tr>
-      <td><audio controls="controls"><source src="audio/637_84_raw.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_lstmp.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_res.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_class.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_position.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_resspeaker.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/637_84_classspeaker.wav"></audio></td>
-    </tr>
-    <tr><td colspan="4"><span><font size='4', face="Arial">2. (speaker id: 770, male speaker) Love with the shield of the broken heart ever his bow doth bend, with a single shaft for a single prize, and the ultimate bolt that parts and flies comes with a thunder of split skies, and a sound of souls that rend.</font></span></td></tr>
-    <tr>
-      <td><audio controls="controls"><source src="audio/770_25_raw.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_lstmp.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_res.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_class.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_position.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_resspeaker.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/770_25_classspeaker.wav"></audio></td>
-    </tr>
-    <tr><td colspan="4"><span><font size='4', face="Arial">3. (speaker id: 1779, female speaker) Early on the following day the whole town was on its feet, and everyone wondered how and where the stranger would build the wonderful palace. The princess alone was silent and sorrowful, and had cried all night till her pillow was wet, so much did she take the fate of the beautiful youth to heart.</font></span></td></tr>
-    <tr>
-      <td><audio controls="controls"><source src="audio/1779_11_raw.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_lstmp.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_res.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_class.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_position.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_resspeaker.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/1779_11_classspeaker.wav"></audio></td>
-    </tr>
-    <tr><td colspan="4"><span><font size='4', face="Arial">4. (speaker id: 2004, female speaker) It is heart racking to struggle day by day, amid incessant interruption and melee, to snatch out of the hurly burly some shreds of humour or pathos or (dare one say?) beauty, and phrase them intelligibly.</font></span></td></tr>
-    <tr>
-      <td><audio controls="controls"><source src="audio/2004_92_raw.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_lstmp.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_res.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_class.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_position.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_resspeaker.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2004_92_classspeaker.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/2_baseline_1365_134830_000014_000000_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
     </tr>
   </tbody>
 </table>
-                                                                                 <font size='4', face="Arial"><h2>3. Samples of CPI</h2></font>
+
+
+<font size='4', face="Arial"><h2>3. Samples of CPI</h2></font>
 <p><font size='4', face="Arial">These utterances are not used in our subjective evaluations.</font></p>
 <p><font size='4', face="Arial">Text: But now there has grown up a large enough leisure class possessed of such wealth that any aspersion on the score of enforced manual employment would be idle and harmless calumny; and the corset has therefore in large measure fallen into disuse within this class.</font></p>
 <p><font size='4', face="Arial">(speaker id: 70, male speaker): but now there has grown up a large enough leisure class possessed of such wealth sp2 that any aspersion on the score of enforced manual employment sp2 would be idle and harmless calumny sp2 and the corset has therefore in large measure fallen into disuse within this class sp3</font></p>
