@@ -9,11 +9,6 @@
         table-layout: fixed; /* 固定布局使列宽均匀 */
         width: 100%; /* 可以调整表格的总宽度 */
     }
-    table2 {
-        border-collapse: collapse; /* 移除或减少边框间距 */
-        table-layout: fixed; /* 固定布局使列宽均匀 */
-        width: 50%; /* 可以调整表格的总宽度 */
-    }
     th {
         padding: 5px; /* 减少单元格内边距 */
         text-align: center; /* 可选：居中对齐内容 */
@@ -26,6 +21,24 @@
         width: 100%; /* 让音频播放器填满单元格 */
     }
   </style>
+  <style>
+    .two-column-table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 50%; /* 新的两列表格总宽度为原来的一半 */
+    }
+    .two-column-table th, .two-column-table td {
+        width: 50%; /* 每列宽度为表格宽度的一半 */
+        text-align: center; /* 根据需要可以居中或靠左 */
+        padding: 5px;
+    }
+    .text-left {
+        text-align: left;
+    }
+    audio {
+        width: 100%;
+    }
+</style>
   </head>
 
 <body>
@@ -102,19 +115,24 @@
 <p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
 <p><font size='4', face="Arial">VITS with baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
 <p><font size='4', face="Arial">We use < as the breath mark within the text. The texts are from the test set of other speakers (breath detection is finished by propoed model).</font></p>
-<table2>
+<class="two-column-table">
   <tbody>
     <tr>
       <th><font size='4' face="Arial"><b>VITS w/ baseline</b></font></th>
       <th><font size='4' face="Arial"><b>VITS w/ proposed</b></font></th>
     </tr>
-    <tr><td colspan="2"><span><font size='4', face="Arial">6. (speaker id: 3630) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">1. (speaker id: 3630) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
+    <tr>
+      <td><audio controls="controls"><source src="audio/2_baseline_1365_134830_000014_000000_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
+    </tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">2. (speaker id: 1811) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
     <tr>
       <td><audio controls="controls"><source src="audio/2_baseline_1365_134830_000014_000000_0.wav"></audio></td>
       <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
     </tr>
   </tbody>
-</table2>
+</table>
 
 
 <font size='4', face="Arial"><h2>3. Samples of CPI</h2></font>
