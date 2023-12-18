@@ -9,6 +9,11 @@
         table-layout: fixed; /* 固定布局使列宽均匀 */
         width: 100%; /* 可以调整表格的总宽度 */
     }
+    table2 {
+        border-collapse: collapse; /* 移除或减少边框间距 */
+        table-layout: fixed; /* 固定布局使列宽均匀 */
+        width: 50%; /* 可以调整表格的总宽度 */
+    }
     th {
         padding: 5px; /* 减少单元格内边距 */
         text-align: center; /* 可选：居中对齐内容 */
@@ -95,9 +100,9 @@
 
 <font size='4', face="Arial"><h2>2. VITS-generated synthetic speech</h2></font>
 <p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
-<p><font size='4', face="Arial">The baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
-<p><font size='4', face="Arial">We use < as the breath mark within the text. The texts are from the test set of other speakers.</font></p>
-<table>
+<p><font size='4', face="Arial">VITS with baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
+<p><font size='4', face="Arial">We use < as the breath mark within the text. The texts are from the test set of other speakers (breath detection is finished by propoed model).</font></p>
+<table2>
   <tbody>
     <tr>
       <th><font size='4' face="Arial"><b>VITS w/ baseline</b></font></th>
@@ -109,7 +114,7 @@
       <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
     </tr>
   </tbody>
-</table>
+</table2>
 
 
 <font size='4', face="Arial"><h2>3. Samples of CPI</h2></font>
