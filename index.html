@@ -12,24 +12,26 @@
 
 <body>
 <font size='4', face="Arial"><h1><center>Duration-Aware Pause Insertion Using Pre-Trained Language Model for Multi-Speaker Text-to-Speech</center></h1></font>
-<font size='4', face="Arial"><center><b>Authors:</b> Dong Yang, Tomoki Koriyama, </center></font>
+<font size='4', face="Arial"><center><b>Authors:</b> Dong Yang, Tomoki Koriyama, Koichi Miyazaki </center></font>
 <!-- <center><a href="https://arxiv.org/abs/">arxiv preprint</a></center> -->
 <!-- <center><a href="https://ydqmkkx.github.io/breath-detection/poster.html">poster</a></center> -->
                             
 <br></br>
 <hr/>
-
+<p><font size='4', face="Arial">Please use headphones to listen to these utterances.</font></p>
 <p></p>                         
                      
-<font size='4', face="Arial"><h2>1. Short utterance</h2></font>
-<p><font size='4', face="Arial">These utterances are not used in our subjective evaluations.</font></p>
+<font size='4', face="Arial"><h2>1. VITS-generated synthetic speech </h2></font>
+<p><font size='4', face="Arial">The training speech data includes the breath sounds of these speakers.</font></p>
 <table>
   <tbody>
     <tr>
-      <th><font size='4', face="Arial"><b>FastSpeech2</b></font></th>
-      <th><font size='4', face="Arial"><b>CPI</b></font></th>
+      <th><font size='4', face="Arial"><b>Groud truth</b></font></th>
+      <th><font size='4', face="Arial"><b>VITS</b></font></th>
+      <th><font size='4', face="Arial"><b>VITS w/ baseline</b></font></th>
+      <th><font size='4', face="Arial"><b>VITS w/ proposed</b></font></th>
     </tr>
-    <tr><td colspan="2"><span><font size='4', face="Arial">1. (speaker id: 783, female speaker) Opposite the printed words "pay to" were written</font></span></td></tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">1. (speaker id: 783) Opposite the printed words "pay to" were written</font></span></td></tr>
     <tr><td colspan="2"><span><font size='4', face="Arial"> the words "kleins sporting goods."</font></span></td></tr>
     <tr>
       <td><audio controls="controls"><source src="audio/783_short_raw.wav"></audio></td>
