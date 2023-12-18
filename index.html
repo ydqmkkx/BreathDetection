@@ -38,7 +38,25 @@
     audio {
         width: 100%;
     }
-</style>
+  </style>
+  <style>
+    .three-column-table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 75%;
+    }
+    .three-column-table th {
+        padding: 5px;
+        text-align: center;
+    }
+    .three-column-table td {
+        padding: 5px;
+        text-align: left;
+    }
+    audio {
+        width: 100%;
+    }
+  </style>
   </head>
 
 <body>
@@ -113,8 +131,8 @@
 
 <font size='4', face="Arial"><h2>2. VITS-generated synthetic speech</h2></font>
 <p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
-<p><font size='4', face="Arial">VITS with baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
-<p><font size='4', face="Arial">We use < as the breath mark within the text. The texts are from the test set of other speakers (breath detection is finished by propoed model).</font></p>
+<p><font size='4', face="Arial">VITS with the baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
+<p><font size='4', face="Arial">We use "<" as the breath mark within the text. The texts are from the test set of other speakers (breath detection here is finished by the propoed model).</font></p>
 <table class="two-column-table">
   <tbody>
     <tr>
@@ -137,24 +155,26 @@
 <p></p>
 
 <font size='4', face="Arial"><h2>3. FastSpeech2-generated synthetic speech</h2></font>
-<p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
-<p><font size='4', face="Arial">VITS with baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
-<p><font size='4', face="Arial">We use ``"<"'' as the breath mark within the text. The texts are from the test set of other speakers (breath detection is finished by propoed model).</font></p>
-<table class="two-column-table">
+<p><font size='4', face="Arial">Pre-trained HiFiGAN is used as the vocoder.</font></p>
+<p><font size='4', face="Arial">FastSpeech2 can not generate the Mel-spectrogram of breath sounds with adequate quality.</font></p>
+<table class="three-column-table">
   <tbody>
     <tr>
-      <th><font size='4' face="Arial"><b>VITS w/ baseline</b></font></th>
-      <th><font size='4' face="Arial"><b>VITS w/ proposed</b></font></th>
+      <th><font size='4' face="Arial"><b>Ground truth</b></font></th>
+      <th><font size='4' face="Arial"><b>FastSpeech2</b></font></th>
+      <th><font size='4' face="Arial"><b>FastSpeech2 w/ proposed</b></font></th>
     </tr>
-    <tr><td colspan="2"><span><font size='4', face="Arial">1. (speaker id: 3630) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
+    <tr><td colspan="3"><span><font size='4', face="Arial">1. (speaker id: 14) Isabella corroborated it, my dearest catherine you cannot form an idea of the dirt, come you must go, you cannot refuse going now.</font></span></td></tr>
     <tr>
-      <td><audio controls="controls"><source src="audio/2_baseline_1365_134830_000014_000000_0.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_gt_14_208_000042_000000.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_origin_14_208_000042_000000.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_proposed_14_208_000042_000000.wav"></audio></td>
     </tr>
-    <tr><td colspan="2"><span><font size='4', face="Arial">2. (speaker id: 1811) But when his mother assures him that the stars always appear so to her < and he turns to look in her face he says < why mother < how beautiful you look.</font></span></td></tr>
+    <tr><td colspan="3"><span><font size='4', face="Arial">2. (speaker id: 850) What side would be likely to prevail in such a conflict, must depend on the means which the contending parties could employ toward insuring success.</font></span></td></tr>
     <tr>
-      <td><audio controls="controls"><source src="audio/2_baseline_4427_20023_000003_000003_0.wav"></audio></td>
-      <td><audio controls="controls"><source src="audio/2_proposed_4427_20023_000003_000003_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_gt_850_131004_000020_000001.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_origin_850_131004_000020_000001.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/3_proposed_850_131004_000020_000001.wav"></audio></td>
     </tr>
   </tbody>
 </table>
