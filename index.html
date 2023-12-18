@@ -134,5 +134,29 @@
   </tbody>
 </table>
 
+<p></p>
+
+<font size='4', face="Arial"><h2>3. FastSpeech2-generated synthetic speech</h2></font>
+<p><font size='4', face="Arial">The training speech data does not include the breath sounds of the two speakers.</font></p>
+<p><font size='4', face="Arial">VITS with baseline model can not synthesize the breath sounds of speaker 3630.</font></p>
+<p><font size='4', face="Arial">We use ``"<"'' as the breath mark within the text. The texts are from the test set of other speakers (breath detection is finished by propoed model).</font></p>
+<table class="two-column-table">
+  <tbody>
+    <tr>
+      <th><font size='4' face="Arial"><b>VITS w/ baseline</b></font></th>
+      <th><font size='4' face="Arial"><b>VITS w/ proposed</b></font></th>
+    </tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">1. (speaker id: 3630) At that moment the small window in the lodge opened < a hand passed through < seized the key and the candlestick < and lighted the taper.</font></span></td></tr>
+    <tr>
+      <td><audio controls="controls"><source src="audio/2_baseline_1365_134830_000014_000000_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/2_proposed_1365_134830_000014_000000_0.wav"></audio></td>
+    </tr>
+    <tr><td colspan="2"><span><font size='4', face="Arial">2. (speaker id: 1811) But when his mother assures him that the stars always appear so to her < and he turns to look in her face he says < why mother < how beautiful you look.</font></span></td></tr>
+    <tr>
+      <td><audio controls="controls"><source src="audio/2_baseline_4427_20023_000003_000003_0.wav"></audio></td>
+      <td><audio controls="controls"><source src="audio/2_proposed_4427_20023_000003_000003_0.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
